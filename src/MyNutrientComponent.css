@@ -1,0 +1,19 @@
+.nutrient {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+  }
+  
+  .nutrient-label {
+    text-align: left;
+    font-weight: bold;
+    color: #3c4a57;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .nutrient-value {
+    text-align: right;
+    color: #555;
+  }
