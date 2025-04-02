@@ -37,7 +37,7 @@ function App() {
   const data = await response.json();
   setMyNutrients(data);
   }
-  else if (response.status === 400) {
+  else if (response.status === 555) {
     setStateLoader(false);
     Swal.fire({
       icon: 'error',
@@ -45,7 +45,7 @@ function App() {
       text: 'Please check the ingredients and try again.',
     });
   }
-  else if (response.status === 403) {
+  else if (response.status === 429) {
     setStateLoader(false);
     Swal.fire({
       icon: 'error',
@@ -87,11 +87,12 @@ const finalSearch = (e) => {
       <div>
         <form onSubmit={finalSearch}>
           <input className='search' onChange={myNutrSearch} value={mySearch} placeholder='1 avocado, 50g rice'/>
+          <div>
+             <button>Search</button>
+         </div>
         </form>
       </div>
-      <div>
-      <button onClick={finalSearch}>Search</button>
-      </div>
+      
       <div>
         {
           myNutrients && <p className='calorien'>{myNutrients.calories} kcal</p>
